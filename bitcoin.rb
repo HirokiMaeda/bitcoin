@@ -8,13 +8,13 @@ while(1)
   sell_price = 500000
   size = 0.001
   if(curent_price > sell_price) && (get_my_money("BTC")["amount"] > size)
-    puts "売ります "
+    puts "SELL"
     order("SELL", sell_price, size)
   elsif (current_price < buy_price) && (get_my_money("JPY")["amount"] > 1000)
     order("BUY", buy_price, size)
-    puts "買います "
+    puts "BUY"
   else
-    puts "何もしません "
+    puts "PASS "
   end
   sleep(1)
 end
